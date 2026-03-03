@@ -42,10 +42,10 @@ export default function Home() {
               Gallery
             </Link>
             <Link
-              href="#about"
+              href="#why-choose-us"
               className="text-muted-foreground transition-colors hover:font-bold hover:text-foreground hover:underline hover:underline-offset-4"
             >
-              About
+              Why us
             </Link>
             <Link
               href="#contact"
@@ -84,8 +84,8 @@ export default function Home() {
             </div>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <Card className="group relative flex cursor-pointer flex-col overflow-hidden border-muted/70">
-              <div className="relative aspect-[4/5]">
+            <Card className="group relative aspect-[4/5] w-full cursor-pointer overflow-hidden border-muted/70 p-0">
+              <div className="absolute inset-0">
                 <Image
                   src="/images/kam-idris-vqMQN9zImG4-unsplash.jpg"
                   alt="Modern minimalist kitchen cabinetry"
@@ -100,8 +100,8 @@ export default function Home() {
                 </CardContent>
               </CardHeader>
             </Card>
-            <Card className="group relative flex cursor-pointer flex-col overflow-hidden border-muted/70">
-              <div className="relative aspect-[4/5]">
+            <Card className="group relative aspect-[4/5] w-full cursor-pointer overflow-hidden border-muted/70 p-0">
+              <div className="absolute inset-0">
                 <Image
                   src="/images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg"
                   alt="Classic shaker-style kitchen cabinetry"
@@ -116,8 +116,8 @@ export default function Home() {
                 </CardContent>
               </CardHeader>
             </Card>
-            <Card className="group relative flex cursor-pointer flex-col overflow-hidden border-muted/70">
-              <div className="relative aspect-[4/5]">
+            <Card className="group relative aspect-[4/5] w-full cursor-pointer overflow-hidden border-muted/70 p-0">
+              <div className="absolute inset-0">
                 <Image
                   src="/images/clay-elliot-1by_GbwEMwc-unsplash.jpg"
                   alt="Pantry and kitchen storage cabinetry"
@@ -180,9 +180,9 @@ export default function Home() {
             ].map((item) => (
               <figure
                 key={item.src}
-                className="group relative overflow-hidden rounded-2xl border bg-muted"
+                className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border bg-muted"
               >
-                <div className="relative aspect-[4/3]">
+                <div className="absolute inset-0">
                   <Image
                     src={item.src}
                     alt={item.label}
@@ -190,7 +190,7 @@ export default function Home() {
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
-                <figcaption className="flex items-center justify-between px-4 py-3 text-xs text-muted-foreground">
+                <figcaption className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-background/90 to-transparent px-4 py-3 text-xs text-muted-foreground">
                   <span>{item.label}</span>
                   <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-secondary-foreground">
                     Custom cabinetry
@@ -201,41 +201,111 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About */}
+        {/* Stats */}
         <section
-          id="about"
+          id="stats"
           className="border-b py-10 md:py-14"
         >
-          <div className="grid gap-8 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-center">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                From first sketch to final handle
+          <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+            <div className="text-center">
+              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                500+
               </p>
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight md:text-3xl">
-                Crafted for how you really live.
-              </h2>
-              <p className="mt-3 max-w-xl text-sm text-muted-foreground md:text-base">
-                Every Mic Living kitchen starts with how you move, cook, and
-                gather. We combine quiet, minimal cabinetry with thoughtful
-                storage so your space feels calm, warm, and easy to live in day
-                after day.
+              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+                Kitchens delivered
               </p>
             </div>
-            <div className="grid gap-3 text-xs text-muted-foreground md:text-sm">
-              <div className="flex items-center justify-between rounded-xl border bg-card px-4 py-3">
-                <span>Cabinetry & installation by one team</span>
-                <span className="font-medium text-foreground">End‑to‑end</span>
-              </div>
-              <div className="flex items-center justify-between rounded-xl border bg-card px-4 py-3">
-                <span>Ideal for renovations and new builds</span>
-                <span className="font-medium text-foreground">Both</span>
-              </div>
-              <div className="flex items-center justify-between rounded-xl border bg-card px-4 py-3">
-                <span>Available for select surrounding areas</span>
-                <span className="font-medium text-foreground">
-                  Your city region
-                </span>
-              </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                10+
+              </p>
+              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+                Years in cabinetry
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                1
+              </p>
+              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+                Team, start to finish
+              </p>
+            </div>
+            <div className="text-center">
+              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                Local
+              </p>
+              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+                Designed & built in your area
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Why choose us */}
+        <section
+          id="why-choose-us"
+          className="border-b py-10 md:py-14"
+        >
+          <div className="mb-8">
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              Why MIC.
+            </p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
+              Why choose us
+            </h2>
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">
+              We focus on what matters: one team, clear process, and cabinetry built to last.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border bg-card p-5 md:p-6">
+              <h3 className="text-base font-semibold text-foreground">
+                One team, start to finish
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                From measure and design to build and install, one team owns your project—no handoffs, no mixed messages.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-card p-5 md:p-6">
+              <h3 className="text-base font-semibold text-foreground">
+                Premium materials
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Moisture-resistant carcasses, soft-close hardware, and finishes that stand up to daily use and look better over time.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-card p-5 md:p-6">
+              <h3 className="text-base font-semibold text-foreground">
+                Custom design, not one-size-fits-all
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Every kitchen is different. We tailor layout, storage, and style to how you cook, gather, and live.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-card p-5 md:p-6">
+              <h3 className="text-base font-semibold text-foreground">
+                Clear process & timeline
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Consult, design, build, install—with upfront timelines and no surprise delays. We keep you informed at every step.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-card p-5 md:p-6">
+              <h3 className="text-base font-semibold text-foreground">
+                Built for your space
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                We measure on site and work with your builder or architect so cabinetry fits perfectly and integrates with your plans.
+              </p>
+            </div>
+            <div className="rounded-2xl border bg-card p-5 md:p-6">
+              <h3 className="text-base font-semibold text-foreground">
+                Warranty & support
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Structural warranty on cabinetry and support after install so your kitchen keeps performing for years.
+              </p>
             </div>
           </div>
         </section>

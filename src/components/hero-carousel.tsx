@@ -67,9 +67,9 @@ export function HeroCarousel() {
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-background/5" />
               <div className="absolute inset-x-4 bottom-8 flex flex-col gap-4 md:inset-x-12 md:bottom-16 md:max-w-xl lg:inset-x-20">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+                <span className="inline-block w-fit rounded-full bg-background/70 px-3 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-foreground backdrop-blur-sm">
                   {slide.eyebrow}
-                </p>
+                </span>
                 <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
                   {slide.title}
                 </h1>
