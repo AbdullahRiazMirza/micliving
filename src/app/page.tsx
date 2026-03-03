@@ -18,29 +18,39 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
           <Link href="#hero" className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
-              ML
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-sm font-semibold tracking-tight">
-                Mic Living
+            <span className="flex flex-col leading-tight">
+              <span className="text-lg font-bold tracking-tight text-foreground">
+                MIC
+                <span className="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-primary align-middle" aria-hidden title="." />
               </span>
-              <span className="text-xs text-muted-foreground">
-                Kitchen Cabinetry
+              <span className="text-xs font-medium text-primary">
+                Premium Cabinets
               </span>
-            </div>
+            </span>
           </Link>
           <nav className="hidden items-center gap-6 text-sm md:flex">
-            <Link href="#categories" className="text-muted-foreground hover:text-foreground">
+            <Link
+              href="#categories"
+              className="text-muted-foreground transition-colors hover:font-bold hover:text-foreground hover:underline hover:underline-offset-4"
+            >
               Categories
             </Link>
-            <Link href="#gallery" className="text-muted-foreground hover:text-foreground">
+            <Link
+              href="#gallery"
+              className="text-muted-foreground transition-colors hover:font-bold hover:text-foreground hover:underline hover:underline-offset-4"
+            >
               Gallery
             </Link>
-            <Link href="#about" className="text-muted-foreground hover:text-foreground">
+            <Link
+              href="#about"
+              className="text-muted-foreground transition-colors hover:font-bold hover:text-foreground hover:underline hover:underline-offset-4"
+            >
               About
             </Link>
-            <Link href="#contact" className="text-muted-foreground hover:text-foreground">
+            <Link
+              href="#contact"
+              className="text-muted-foreground transition-colors hover:font-bold hover:text-foreground hover:underline hover:underline-offset-4"
+            >
               Contact
             </Link>
           </nav>
@@ -165,7 +175,7 @@ export default function Home() {
               },
               {
                 src: "/images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg",
-                label: "Entertainer&apos;s island bench",
+                label: "Entertainer island bench",
               },
             ].map((item) => (
               <figure

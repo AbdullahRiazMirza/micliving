@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mic Living | Kitchen Cabinets",
+  title: "MIC. Premium Cabinets",
   description:
-    "Custom-designed kitchen cabinets tailored to your home. Mic Living crafts premium cabinetry with thoughtful storage and timeless finishes.",
+    "Custom-designed kitchen cabinets tailored to your home. MIC. Premium Cabinets crafts cabinetry with thoughtful storage and timeless finishes.",
 };
 
 export default function RootLayout({

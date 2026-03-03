@@ -17,7 +17,7 @@ import {
 const SLIDES = [
   {
     src: "/images/collov-home-design--aDGbdTsBZg-unsplash.jpg",
-    eyebrow: "Mic Living — Kitchen Cabinets",
+    eyebrow: "MIC. Premium Cabinets",
     title: "Modern cabinetry for warm, livable kitchens.",
   },
   {
