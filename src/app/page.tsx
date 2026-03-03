@@ -328,13 +328,13 @@ export default function Home() {
               </p>
               <form
                 className="mt-6 space-y-4"
-                action="https://formspree.io/f/yourFormId"
+                action="https://formspree.io/f/mykdqbdy"
                 method="POST"
               >
                 <input
                   type="hidden"
                   name="_subject"
-                  value="New Mic Living kitchen enquiry"
+                  value="New MIC Living LLC enquiry"
                 />
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-1.5">
@@ -412,17 +412,23 @@ export default function Home() {
             <div className="min-w-0 space-y-6 rounded-2xl border bg-card p-4 text-sm text-muted-foreground sm:p-5 md:p-6">
               <div>
                 <h3 className="text-sm font-semibold text-foreground">
-                  Contact details
+                  MIC Living LLC
                 </h3>
                 <p className="mt-2">
-                  Phone: <span className="font-medium text-foreground">XX XXX XXX</span>
+                  Phone:{" "}
+                  <a
+                    href="tel:832-538-6592"
+                    className="font-medium text-foreground underline-offset-4 hover:underline"
+                  >
+                    832-538-6592
+                  </a>
                   <br />
                   Email:{" "}
                   <a
-                    href="mailto:hello@micliving.com"
+                    href="mailto:Info@micliving.com"
                     className="font-medium text-foreground underline-offset-4 hover:underline"
                   >
-                    hello@micliving.com
+                    Info@micliving.com
                   </a>
                 </p>
               </div>
