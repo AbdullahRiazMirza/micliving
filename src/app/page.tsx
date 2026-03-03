@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { HeroCarousel } from "@/components/hero-carousel";
+import { MobileNavDrawer } from "@/components/mobile-nav-drawer";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -16,19 +17,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
-          <Link href="#hero" className="flex items-center gap-2">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:py-4 md:px-6">
+          <Link href="#hero" className="flex shrink-0 items-center gap-2">
             <span className="flex flex-col leading-tight">
-              <span className="text-lg font-bold tracking-tight text-foreground">
+              <span className="text-base font-bold tracking-tight text-foreground sm:text-lg">
                 MIC
                 <span className="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-primary align-middle" aria-hidden title="." />
               </span>
-              <span className="text-xs font-medium text-primary">
+              <span className="text-[10px] font-medium text-primary sm:text-xs">
                 Premium Cabinets
               </span>
             </span>
           </Link>
-          <nav className="hidden items-center gap-6 text-sm md:flex">
+          <nav className="hidden items-center gap-4 text-sm md:flex md:gap-6" aria-label="Main">
             <Link
               href="#categories"
               className="text-muted-foreground transition-colors hover:font-bold hover:text-foreground hover:underline hover:underline-offset-4"
@@ -55,7 +56,8 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-2">
-            <Button asChild size="sm" className="hidden md:inline-flex">
+            <MobileNavDrawer />
+            <Button asChild size="sm" className="shrink-0">
               <Link href="#contact">Book a consultation</Link>
             </Button>
           </div>
@@ -67,15 +69,15 @@ export default function Home() {
         <HeroCarousel />
       </section>
 
-      <main className="mx-auto max-w-6xl px-4 pb-16 pt-12 md:px-6 md:pb-24 md:pt-16">
+      <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-8 sm:pt-10 md:px-6 md:pb-24 md:pt-16">
         {/* Shop by category */}
         <section
           id="categories"
-          className="border-b pb-10 md:pb-14"
+          className="border-b pb-8 sm:pb-10 md:pb-14"
         >
-          <div className="mb-6 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <div className="mb-4 flex flex-col gap-2 sm:mb-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+              <h2 className="text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
                 Shop by category
               </h2>
               <p className="mt-1 max-w-xl text-sm text-muted-foreground">
@@ -83,7 +85,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             <Card className="group relative aspect-[4/5] w-full cursor-pointer overflow-hidden border-muted/70 p-0">
               <div className="absolute inset-0">
                 <Image
@@ -139,11 +141,11 @@ export default function Home() {
 
         <section
           id="gallery"
-          className="border-b py-10 md:py-14"
+          className="border-b py-8 sm:py-10 md:py-14"
         >
-          <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div className="mb-4 flex flex-col gap-3 sm:mb-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+              <h2 className="text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
                 Recent kitchens
               </h2>
               <p className="mt-2 max-w-xl text-sm text-muted-foreground">
@@ -151,7 +153,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="grid gap-4 md:grid-cols-3 md:gap-5">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-5">
             {[
               {
                 src: "/images/christian-mackie-cc0Gg3BegjE-unsplash.jpg",
@@ -204,38 +206,38 @@ export default function Home() {
         {/* Stats */}
         <section
           id="stats"
-          className="border-b py-10 md:py-14"
+          className="border-b py-8 sm:py-10 md:py-14"
         >
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-6 md:grid-cols-4 md:gap-8">
             <div className="text-center">
-              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              <p className="text-2xl font-bold tracking-tight text-primary sm:text-3xl md:text-4xl">
                 500+
               </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.12em] text-muted-foreground sm:text-xs md:text-sm">
                 Kitchens delivered
               </p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              <p className="text-2xl font-bold tracking-tight text-primary sm:text-3xl md:text-4xl">
                 10+
               </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.12em] text-muted-foreground sm:text-xs md:text-sm">
                 Years in cabinetry
               </p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              <p className="text-2xl font-bold tracking-tight text-primary sm:text-3xl md:text-4xl">
                 1
               </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.12em] text-muted-foreground sm:text-xs md:text-sm">
                 Team, start to finish
               </p>
             </div>
             <div className="text-center">
-              <p className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              <p className="text-2xl font-bold tracking-tight text-primary sm:text-3xl md:text-4xl">
                 Local
               </p>
-              <p className="mt-1 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground md:text-sm">
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.12em] text-muted-foreground sm:text-xs md:text-sm">
                 Designed & built in your area
               </p>
             </div>
@@ -245,21 +247,21 @@ export default function Home() {
         {/* Why choose us */}
         <section
           id="why-choose-us"
-          className="border-b py-10 md:py-14"
+          className="border-b py-8 sm:py-10 md:py-14"
         >
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
               Why MIC.
             </p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">
+            <h2 className="mt-2 text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
               Why choose us
             </h2>
             <p className="mt-2 max-w-xl text-sm text-muted-foreground">
               We focus on what matters: one team, clear process, and cabinetry built to last.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-2xl border bg-card p-5 md:p-6">
+          <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-2xl border bg-card p-4 sm:p-5 md:p-6">
               <h3 className="text-base font-semibold text-foreground">
                 One team, start to finish
               </h3>
@@ -267,7 +269,7 @@ export default function Home() {
                 From measure and design to build and install, one team owns your project—no handoffs, no mixed messages.
               </p>
             </div>
-            <div className="rounded-2xl border bg-card p-5 md:p-6">
+            <div className="rounded-2xl border bg-card p-4 sm:p-5 md:p-6">
               <h3 className="text-base font-semibold text-foreground">
                 Premium materials
               </h3>
@@ -275,7 +277,7 @@ export default function Home() {
                 Moisture-resistant carcasses, soft-close hardware, and finishes that stand up to daily use and look better over time.
               </p>
             </div>
-            <div className="rounded-2xl border bg-card p-5 md:p-6">
+            <div className="rounded-2xl border bg-card p-4 sm:p-5 md:p-6">
               <h3 className="text-base font-semibold text-foreground">
                 Custom design, not one-size-fits-all
               </h3>
@@ -283,7 +285,7 @@ export default function Home() {
                 Every kitchen is different. We tailor layout, storage, and style to how you cook, gather, and live.
               </p>
             </div>
-            <div className="rounded-2xl border bg-card p-5 md:p-6">
+            <div className="rounded-2xl border bg-card p-4 sm:p-5 md:p-6">
               <h3 className="text-base font-semibold text-foreground">
                 Clear process & timeline
               </h3>
@@ -291,7 +293,7 @@ export default function Home() {
                 Consult, design, build, install—with upfront timelines and no surprise delays. We keep you informed at every step.
               </p>
             </div>
-            <div className="rounded-2xl border bg-card p-5 md:p-6">
+            <div className="rounded-2xl border bg-card p-4 sm:p-5 md:p-6">
               <h3 className="text-base font-semibold text-foreground">
                 Built for your space
               </h3>
@@ -299,7 +301,7 @@ export default function Home() {
                 We measure on site and work with your builder or architect so cabinetry fits perfectly and integrates with your plans.
               </p>
             </div>
-            <div className="rounded-2xl border bg-card p-5 md:p-6">
+            <div className="rounded-2xl border bg-card p-4 sm:p-5 md:p-6">
               <h3 className="text-base font-semibold text-foreground">
                 Warranty & support
               </h3>
@@ -313,11 +315,11 @@ export default function Home() {
         {/* Contact */}
         <section
           id="contact"
-          className="pt-12 md:pt-16"
+          className="pt-8 sm:pt-12 md:pt-16"
         >
-          <div className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+          <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
+            <div className="min-w-0">
+              <h2 className="text-xl font-semibold tracking-tight sm:text-2xl md:text-3xl">
                 Share your kitchen plans
               </h2>
               <p className="mt-2 max-w-xl text-sm text-muted-foreground md:text-base">
@@ -396,8 +398,8 @@ export default function Home() {
                       required
                   />
                 </div>
-                <div className="flex flex-wrap items-center gap-3 pt-2">
-                  <Button type="submit" size="lg">
+                <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap sm:items-center">
+                  <Button type="submit" size="lg" className="w-full sm:w-auto">
                     Send enquiry
                   </Button>
                   <p className="text-xs text-muted-foreground md:text-sm">
@@ -407,7 +409,7 @@ export default function Home() {
                 </div>
               </form>
             </div>
-            <div className="space-y-6 rounded-2xl border bg-card p-5 text-sm text-muted-foreground md:p-6">
+            <div className="min-w-0 space-y-6 rounded-2xl border bg-card p-4 text-sm text-muted-foreground sm:p-5 md:p-6">
               <div>
                 <h3 className="text-sm font-semibold text-foreground">
                   Contact details

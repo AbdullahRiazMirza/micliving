@@ -66,18 +66,18 @@ export function HeroCarousel() {
                 sizes="100vw"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-background/5" />
-              <div className="absolute inset-x-4 bottom-8 flex flex-col gap-4 md:inset-x-12 md:bottom-16 md:max-w-xl lg:inset-x-20">
-                <span className="inline-block w-fit rounded-full bg-background/70 px-3 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-foreground backdrop-blur-sm">
+              <div className="absolute inset-x-4 bottom-6 flex flex-col gap-3 sm:bottom-8 sm:gap-4 md:inset-x-12 md:bottom-16 md:max-w-xl lg:inset-x-20">
+                <span className="inline-block w-fit rounded-full bg-background/70 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-foreground backdrop-blur-sm sm:text-sm">
                   {slide.eyebrow}
                 </span>
-                <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+                <h1 className="text-balance text-2xl font-semibold tracking-tight text-foreground sm:text-3xl md:text-4xl lg:text-5xl">
                   {slide.title}
                 </h1>
-                <div className="flex flex-wrap items-center gap-3">
-                  <Button asChild size="lg">
+                <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
+                  <Button asChild size="lg" className="w-full sm:w-auto">
                     <Link href="#contact">Book a design consult</Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg">
+                  <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
                     <Link href="#gallery">View kitchens</Link>
                   </Button>
                 </div>
@@ -86,8 +86,8 @@ export function HeroCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 md:left-8" />
-      <CarouselNext className="right-4 top-1/2 -translate-y-1/2 md:right-8" />
+      <CarouselPrevious className="left-2 top-1/2 -translate-y-1/2 sm:left-4 md:left-8" />
+      <CarouselNext className="right-2 top-1/2 -translate-y-1/2 sm:right-4 md:right-8" />
     </Carousel>
   );
 }
