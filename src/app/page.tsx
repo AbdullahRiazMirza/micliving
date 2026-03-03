@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { HeroCarousel } from "@/components/hero-carousel";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -51,58 +52,12 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 pb-16 pt-6 md:px-6 md:pb-24 md:pt-10">
-        {/* Hero - inspired by smcliving.pk */}
-        <section id="hero" className="mb-12 md:mb-16">
-          <div className="relative overflow-hidden rounded-3xl border bg-muted">
-            <div className="relative aspect-[16/9] md:aspect-[21/9]">
-              <Image
-                src="/kitchen-hero.jpg"
-                alt="Mic Living kitchen cabinetry"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-background/5" />
-              <div className="absolute inset-x-4 bottom-6 flex flex-col gap-4 md:inset-x-10 md:bottom-10 md:max-w-xl">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                  Mic Living — Kitchen Cabinets
-                </p>
-                <h1 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
-                  Modern cabinetry for warm, livable kitchens.
-                </h1>
-                <div className="flex flex-wrap items-center gap-3">
-                  <Button asChild size="lg">
-                    <Link href="#contact">Book a design consult</Link>
-                  </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link href="#gallery">View kitchens</Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center justify-between border-t bg-background/80 px-4 py-3 text-[11px] text-muted-foreground md:px-6">
-              <span>Hero Slide</span>
-              <div className="flex items-center gap-2">
-                {["01", "02", "03", "04", "05"].map((item, index) => (
-                  <button
-                    key={item}
-                    className={`flex h-6 w-6 items-center justify-center rounded-full text-[10px] ${
-                      index === 0
-                        ? "bg-foreground text-background"
-                        : "border border-border bg-background"
-                    }`}
-                    type="button"
-                    aria-label={`Slide ${item}`}
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Full-width hero carousel — outside main for edge-to-edge */}
+      <section id="hero" className="w-full">
+        <HeroCarousel />
+      </section>
 
+      <main className="mx-auto max-w-6xl px-4 pb-16 pt-12 md:px-6 md:pb-24 md:pt-16">
         {/* Shop by category */}
         <section
           id="categories"
@@ -122,8 +77,8 @@ export default function Home() {
             <Card className="group relative flex cursor-pointer flex-col overflow-hidden border-muted/70">
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/kitchen-category-modern.jpg"
-                  alt="Modern kitchen cabinets"
+                  src="/images/kam-idris-vqMQN9zImG4-unsplash.jpg"
+                  alt="Modern minimalist kitchen cabinetry"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
@@ -138,8 +93,8 @@ export default function Home() {
             <Card className="group relative flex cursor-pointer flex-col overflow-hidden border-muted/70">
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/kitchen-category-classic.jpg"
-                  alt="Classic shaker kitchen"
+                  src="/images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg"
+                  alt="Classic shaker-style kitchen cabinetry"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
@@ -154,8 +109,8 @@ export default function Home() {
             <Card className="group relative flex cursor-pointer flex-col overflow-hidden border-muted/70">
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/kitchen-category-storage.jpg"
-                  alt="Pantry and storage cabinetry"
+                  src="/images/clay-elliot-1by_GbwEMwc-unsplash.jpg"
+                  alt="Pantry and kitchen storage cabinetry"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
@@ -189,27 +144,27 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-3 md:gap-5">
             {[
               {
-                src: "/kitchen-1.jpg",
+                src: "/images/christian-mackie-cc0Gg3BegjE-unsplash.jpg",
                 label: "Northside townhouse",
               },
               {
-                src: "/kitchen-2.jpg",
+                src: "/images/jason-briscoe-GliaHAJ3_5A-unsplash.jpg",
                 label: "Family entertainer",
               },
               {
-                src: "/kitchen-3.jpg",
+                src: "/images/julia-jylx7bVZMIk-unsplash.jpg",
                 label: "Compact city kitchen",
               },
               {
-                src: "/kitchen-4.jpg",
+                src: "/images/roam-in-color-zzMb7jacyBc-unsplash.jpg",
                 label: "Light‑filled shaker kitchen",
               },
               {
-                src: "/kitchen-5.jpg",
+                src: "/images/kam-idris-vqMQN9zImG4-unsplash.jpg",
                 label: "Oak and stone palette",
               },
               {
-                src: "/kitchen-6.jpg",
+                src: "/images/naomi-hebert-MP0bgaS_d1c-unsplash.jpg",
                 label: "Entertainer&apos;s island bench",
               },
             ].map((item) => (
